@@ -1,0 +1,97 @@
+# Add-on types
+
+This page provides a general overview of the two types of add-ons
+you can build: *Google Workspace add-ons* and *Editor add-ons*. These
+add-on types differ in the applications they extend,
+creation methods, and restrictions.
+
+## Google Workspace add-ons
+
+Google Workspace add-ons are the latest generation of add-ons and
+provide many capabilities, including the following:
+
+- **Build one add-on for multiple
+  Google Workspace apps**: Instead of separate add-ons for
+  each app, you can build and manage a single Google Workspace add-on that
+  works across Google Workspace. A Google Workspace add-on can extend
+  the following host applications:
+
+  <br />
+
+  [Video](https://www.youtube.com/watch?v=h7nYnzGQp9k)
+
+  <br />
+
+  - Gmail
+  - Google Calendar
+  - Google Chat
+  - Google Docs
+  - Google Drive
+  - Google Meet
+  - Google Sheets
+  - Google Slides
+- **Increase brand awareness**: Add-ons icons are visible by
+  default in the right-side panel of host apps.
+
+- **Build homepage experiences** : Create individual
+  [homepages](https://developers.google.com/workspace/add-ons/concepts/homepages) for each
+  Google Workspace app your add-on extends, or
+  use the same homepage for multiple apps.
+
+- **Reflect context in your add-on**: Design your
+  Google Workspace add-on to show interfaces specific to the host app. For
+  example, your add-on can display info from an email
+  or calendar event, or suggest an action based on the current
+  Google Workspace app page.
+
+- **Use standardized interfaces** : Construct user interfaces from built-in
+  widget elements provided by the Google Apps Script
+  [`Card`](https://developers.google.com/apps-script/reference/card-service/card) service. You don't need
+  expertise with HTML or CSS to define these interfaces.
+
+- **Extend Gmail desktop and mobile clients**: If a
+  Google Workspace add-on extends Gmail, use it in both the
+  desktop and mobile versions. You don't need to design a separate mobile
+  version. The same interface is used everywhere.
+
+- **Use your preferred runtime**: Develop Google Workspace add-ons with your
+  preferred hosting infrastructure, development tools, source control system,
+  coding language, and code libraries.
+
+## Editor add-ons
+
+Editor add-ons extend a Google Editor application, such as
+Docs, Sheets, Slides, or
+Forms. Each Editor add-on type (for
+example, Sheets add-ons) has its own
+type-specific capabilities, restrictions, and special considerations. When
+building Editor add-ons, understand these Editor-specific
+details. For more details on add-ons for specific Editors, see
+the following:
+
+- [Google Docs](https://developers.google.com/workspace/add-ons/editors/docs)
+- [Google Forms](https://developers.google.com/workspace/add-ons/editors/forms)
+- [Google Sheets](https://developers.google.com/workspace/add-ons/editors/sheets)
+- [Google Slides](https://developers.google.com/workspace/add-ons/editors/slides)
+
+Editor add-ons can automate common editor tasks such as file
+creation, editing, formatting, and moving data between applications.
+Editor add-on interfaces are highly customizable.
+
+Editor add-ons are ideal for automating tasks within Google
+Docs, Sheets, Slides, or
+Forms for individual or internal use. For add-ons
+requiring large-scale capabilities that need to handle many users, require low
+latency, or demands full control over your infrastructure, consider building a
+Google Workspace add-ons on a [different runtime](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes)
+environment for better control over infrastructure, deployment and release
+processes.
+
+Editor add-ons behave differently from Google Workspace add-ons in these
+ways:
+
+- Editor add-ons can create interfaces consisting of menu items, dialogs, and sidebars. Interfaces are defined using standard [HTML and CSS](https://developers.google.com/workspace/add-ons/concepts/html-interfaces).
+- Editor add-ons have special authorization rules because they interact with files in Google Drive. Understand [Editor add-on authorization](https://developers.google.com/workspace/add-ons/concepts/editor-auth-lifecycle) while developing an Editor add-on.
+- Files created and updated in each editor have specific structures. For example, Google Slides, presentations are composed of pages such as slides, masters, or layouts. Understand these file structures, as add-ons often interact with them when reading or editing files.
+- Editor add-ons only function in desktop clients, not Android or iOS.
+- Editor add-ons must be implemented in Apps Script.

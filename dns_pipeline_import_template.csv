@@ -1,0 +1,5 @@
+Domain,Type,Hostname,Value,TTL
+cyber-mesh.net,A,@,185.199.108.153,3600
+security-ops.org,TXT,@,v=spf1 include:_spf.google.com ~all,3600
+cyber-shield.net,CNAME,api,secure.cyber-shield.net,120
+mainframe-cloud.io,AAAA,@,2001:db8::1,3600
