@@ -1,0 +1,32 @@
+;;
+;; Domain:     hacyberglobal.dpdns.org.
+;; Exported:   2026-07-06 03:51:00
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.
+;;
+
+;; SOA Record
+hacyberglobal.dpdns.org.	3600	IN	SOA	isla.ns.cloudflare.com. dns.cloudflare.com. 2026070601 10000 2400 604800 3600
+
+;; NS Records
+hacyberglobal.dpdns.org.	86400	IN	NS	isla.ns.cloudflare.com.
+hacyberglobal.dpdns.org.	86400	IN	NS	lynn.ns.cloudflare.com.
+
+;; A Records
+hacyberglobal.dpdns.org.	1	IN	A	37.140.223.216 ; cf_tags=cf-proxied:true
+
+;; CNAME Records
+support.hacyberglobal.dpdns.org.	1	IN	CNAME	hacyberglobal.dpdns.org. ; cf_tags=cf-proxied:true
+www.hacyberglobal.dpdns.org.	1	IN	CNAME	hacyberglobal.dpdns.org. ; cf_tags=cf-proxied:true
+
+;; MX Records
+hacyberglobal.dpdns.org.	1	IN	MX	10 eforward1.registrar-servers.com.
+hacyberglobal.dpdns.org.	1	IN	MX	10 eforward2.registrar-servers.com.
+hacyberglobal.dpdns.org.	1	IN	MX	10 eforward3.registrar-servers.com.
+hacyberglobal.dpdns.org.	1	IN	MX	15 eforward4.registrar-servers.com.
+hacyberglobal.dpdns.org.	1	IN	MX	20 eforward5.registrar-servers.com.
+
+;; TXT Records
+hacyberglobal.dpdns.org.	1	IN	TXT	"v=spf1 include:spf.efwd.registrar-servers.com ~all"
